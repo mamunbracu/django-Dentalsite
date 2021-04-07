@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Appointment Dr. John Elder Dentist To The Stars{%endblock %}
+{% block meta_description %}This is the website of Dr. John Elder DMD the greatest dentist who ever
+dentisted!{% endblock %}
+
+{% block content %}
+<!-- ***** Breadcrumb Area Start ***** -->
+
+<div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Set Appointment</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
+<!-- Book An Oppointment Area Start -->
+<section class="book-an-oppointment-area bg-img bg-gradient-overlay jarallax clearfix pb-5"
+    style="background-image: url('{% static 'website/img/bg-img/12.jpg' %}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-light text-center pt-5">Grab The Chance To Fit Your Teeth</h2> <hr> <hr>
+            </div>
+        </div>
+
+
+        <!-- Appointment Form -->
+        <div class="row">
+            
+            <div class="col-md-6">
+                <h4 class="text-light"><i class="fa fa-quote-left"></i> 
+                    <span style="color: #FFEB3B;"> Be true to your teeth and they won't be false to you.</span> <i class="fa fa-quote-right"></i></h4>
+                <hr>
+                <img src="{% static 'website/img/apt.jpg' %}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-center text-light">Book Your Appointment Now</h4> <hr>
+                <div class="appointment-form">
+
+                    <form method="POST">
+                        {{form|crispy}}
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn dento-btn">Booking Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Book An Appointment Area End -->
+
+<!-- Book An Appointment footer start -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Appointment System</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'website/img/aps.png' %}" alt="">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'website/img/aptform.jpg' %}" alt="">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'website/img/aptt.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Book An Appointment footer end -->
+
+<!-- Accordion Start -->
+<section class="py-5 acord">
+    
+<div class="container">
+    <div class="row py-3">
+        <div class="col-12">
+            <h2 class="text-center" style="color: #FF8001;">FAQ'S</h2>
+            <h5 class="text-center">Have some question</h5>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default one mb-2">
+            <div class="panel-heading " role="tab" id="headingOne">
+                 <h4 class="panel-title p-2">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Mode of payment/How can I make the payment?
+            </a>
+          </h4>
+    
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in p-2" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">We have a range of payment options available to facilitate the process for you. You can make the payment via cash, credit card, debit card or Paytm.</div>
+            </div>
+        </div>
+        <div class="panel panel-default one mb-2">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                 <h4 class="panel-title p-2">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Where are your clinics located?
+            </a>
+          </h4>
+    
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse p-2" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">Dento Dental, India’s largest dental chain has a network of 310+ clinics in all over bangladesh.We are very much helpful to give the best quality to our patient. You can reach out to our Dental Healthline number for further deatils.</div>
+            </div>
+        </div>
+        <div class="panel panel-default one mb-2">
+            <div class="panel-heading" role="tab" id="headingThree">
+                 <h4 class="panel-title p-2">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                What are the consultation charges?
+            </a>
+          </h4>
+    
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse p-2" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">The consultation fee is TK. 800/- for the initial diagnosis. For a specialist opinion,the charges are TK. 1500/-. </div>
+            </div>
+        </div>
+        <div class="panel panel-default one mb-2">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                 <h4 class="panel-title p-2">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                What are the clinic timings?
+            </a>
+          </h4>
+    
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse p-2" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">The clinic timings are 9 am – 9 pm. Prior to 11 am and post 6 pm,the doctors are available only through prior appointments. The working hours on Sundays are 10 am – 7 pm. The clinics have their weekly off on different weekdays.</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default one mb-2">
+                <div class="panel-heading" role="tab" id="headingOne">
+                     <h4 class="panel-title p-2">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How do I find your clinic address ?
+                </a>
+              </h4>
+        
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in p-2" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">All our clinics are listed on google maps & you can easily locate us though the app or you can find all the clinic addresses on the website. Also, you can call our Dental Healthline Number and they will give you the directions.</div>
+                </div>
+            </div>
+            <div class="panel panel-default one mb-2">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                     <h4 class="panel-title p-2">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Are you functional on weekend?
+                </a>
+              </h4>
+        
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse p-2" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">Yes. All our clinics are functional on weekends. Saturday timings – 9 am – 9 pm. Prior to 11 am and post 6 pm,the doctors are available only through prior appointments & Sunday timings are 10 am – 7 pm</div>
+                </div>
+            </div>
+            <div class="panel panel-default one mb-2">
+                <div class="panel-heading" role="tab" id="headingThree">
+                     <h4 class="panel-title p-2">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Who will be the treating doctor?
+                </a>
+              </h4>
+        
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse p-2" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">We have an expert team of doctors available across all our clinics. Once you book the appointment, you will be informed about your doctor. </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Accordion end -->
+{% endblock %}

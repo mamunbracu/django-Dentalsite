@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Appointment Dr. John Elder Dentist To The Stars{%endblock %}
+{% block meta_description %}This is the website of Dr. John Elder DMD the greatest dentist who ever
+dentisted!{% endblock %}
+
+{% block content %}
+<section class="py-5" style="background: #e6d7d7ba">
+    
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="widget-title">Newsletter</h2>
+                <p class="text-dark">We will send out weekly newest article and some great offers</p> <hr><hr>
+            </div> 
+        </div>
+        <div class="row p-3">
+            <div class="col-md-6 p-3">
+                
+                <img src="{% static 'website/img/nsub.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6 p-3">
+                
+                <div class="footer-newsletter-form">
+                <form method="POST">
+                    {{form|crispy}}
+                    {% csrf_token %}
+                    <div>
+                        <button type="submit" class="btn btn-outline-success"><i class="fa fa-paper-plane" aria-hidden="true"></i> Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+</section>
+{% endblock %}
+
+
+<div class="col-12">
+    <div class="single-footer-widget">
+        <!-- Widget Title -->
+        
+
+        <p>We will send out weekly newest article and some great offers</p>
+        <!-- Newsletter Form -->
+        <div class="footer-newsletter-form">
+          <form method="POST">
+            {{form|crispy}}
+            {% csrf_token %}
+            <div>
+            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Subscribe</button>
+        </div>
+          </form>
+        </div>
+        </div>
+</div>

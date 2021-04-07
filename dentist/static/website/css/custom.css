@@ -1,0 +1,146 @@
+
+/* Abouts Us*/
+/* About ceo start */
+
+
+.about-us img{
+ height: 430px;
+ width: 100%;
+}
+.about-us .btn{
+    background: #F5781D;
+    color: #fff;
+    padding: 8px 13px;
+}
+.about-us .btn:hover{
+    background:#4F3325 ;
+    color: #fff;
+    }
+
+/* About ceo end */
+/* common use start*/
+
+.line{
+    width: 200px;
+    height: 2px;
+    background-color: #bd971b;
+ }
+/* common use end*/
+
+/* cco start*/
+.cco .btn{
+    background: #F5781D;
+    color: #fff;
+    padding: 8px 13px;
+}
+.cco .btn:hover{
+    background:#4F3325 ;
+    color: #fff;
+    }
+.cco img{
+    height: 400px;
+    width: 100%;
+}
+/* common use end*/
+/* quote start*/
+.quote-about{
+    background-color: #e6dab3;
+}
+/* quote end*/
+
+/*  description start*/
+
+.despic img{
+    height: auto;
+    width: 90%;
+}
+.despic .abtline{
+    margin-left: 28rem;
+}
+/* common use start*/
+/* value SEction start */
+.despicture .abtline{
+    margin-left: 29rem;
+}
+.despicture .collam{
+    background: rgb(72, 70, 6);
+    
+}
+.despicture .collam2{
+    background: rgb(39, 38, 15);
+    
+}
+.despicture .collam3{
+    background: rgb(72, 70, 6);
+    
+}
+/* value SEction start */
+
+/* Accordion start on appointment*/
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 3px;
+}
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+.acord .one {
+    border-style: solid;
+    border-width: 1px;
+  }
+.panel-group h4{
+    font-size: 13px;
+}
+/* Accordion on appointment start */
+/* symptomp end */
+.symptomp{
+    background: #ece0e0;
+}
+.symptomp .abtline {
+    margin-left: 35rem;
+}
+
+.symptomp .lined {
+    width: 391px;
+    height: 2px;
+    background-color: #bd971b;
+}
+/* symptomp end */
+/* copl fact start */
+.clm{
+    background: #452C20;
+    border: 1px solid rgb(37, 21, 21);
+}
+.dento-cta-area .mtb{
+    padding: 13px 17px;
+}
+/* copl fact end */
+.safety{
+    background: #d8cece5c;
+}
+.safety .abtline {
+    margin-left: 27rem;
+}
+
+.safety .linede {
+    width: 241px;
+    height: 2px;
+    background-color: #bd971b;
+}
+
+.sec-ser-det{
+    background: rgb(236, 172, 172);
+}
+
+.sec-ser-det .row2{
+    border: 1px solid red;
+    box-shadow: 1px 1px 3px 5px;
+}

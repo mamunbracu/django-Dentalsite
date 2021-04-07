@@ -1,0 +1,244 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{% block meta_description %}Welcome To The Website Of Dr. John Elder DMD Dentist To The Stars!{% endblock %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>{% block title %}Dr. Mamun's Dento {% endblock %}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'website/img/core-img/favicon.ico' %}">
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+
+  <!-- custom Stylesheet -->
+  <link rel="stylesheet" href="{% static 'website/css/custom.css' %}">
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preload-content">
+      <div id="dento-load"></div>
+    </div>
+  </div>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <!-- Top Content -->
+          <div class="col-6 col-md-9 col-lg-8">
+            <div class="top-header-content">
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="180/2 GP CHA, Mohakhali,Dhaka"><i class="fa fa-map-marker"></i> <span>180/2 GP CHA, Mohakhali,Dhaka</span></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="mamunt.bracu@gmail.com"><i class="fa fa-envelope"></i> <span>mamunt.bracu@gmail.com</span></a>
+            </div>
+          </div>
+          <!-- Top Header Social Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="top-header-social-info text-right">
+              <a href="http://facebook.com/drjohn" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Header End -->
+
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Classy Menu -->
+          <nav class="classy-navbar justify-content-between" id="dentoNav">
+
+            <!-- Logo -->
+            <a class="nav-brand" href=""><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="{% url 'dental:index' %}">Home</a></li>
+                  <li><a href="{% url 'Doctors:doctor' %}">Doctor</a></li>
+                  <li><a href="{% url 'dental:service' %}">Service</a></li>
+                  <li><a href="{% url 'dental:pricing' %}">Pricing</a></li>
+                  <li><a href="{% url 'dental:about' %}">About</a></li>
+                  <li><a href="{% url 'Appointment:contact' %}">Contact</a></li>
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+
+            <!-- Booking Now Button -->
+            <a href="{% url 'Appointment:appointment' %}" class="btn dento-btn booking-btn">Book Appointment Now</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+   <!-- messages section -->
+   <div class="container">
+   
+    <div class="messages container ">
+      {% if messages %}
+      {% for message in messages %}
+      <div {% if message.tags %} class="alert alert-{{message.tags}}{% endif %}" role="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+
+
+ <!-- ***** Footer Area Start ***** -->
+  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/3.jpg' %});">
+    <div class="container">
+      <div class="row">
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <a href="#0" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
+            <p>This is the place where you will get the best dental solution.Our Dentist and the helper are so much helpful and cooperative.We will ensure your teeth safety first.</p>
+            <div class="footer-contact">
+              <p><i class="icon_pin"></i> 180/2 GP CHA Mohakhali, Dhaka Bangladesh</p>
+              <p><i class="icon_phone"></i> 01846241535</p>
+              <p><i class="icon_mail"></i> mamunt.bracu@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Opening Hours</h5>
+
+            <!-- Opening Hours -->
+            <ul class="opening-hours">
+              <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
+              <li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
+              <li><span>Sat</span> <span>9.00-17.00</span></li>
+              <li><span>Sun</span> <span>10.00-17.00</span></li>
+              <li><span>Holiday</span> <span>Closed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Quick Link</h5>
+
+            <!-- Quick Links Nav -->
+            <nav>
+              <ul class="quick-links">
+                <li><a href="#0">About</a></li>
+                <li><a href="#0">FAQs</a></li>
+                <li><a href="#0">Contact</a></li>
+                <li><a href="#0">Policy</a></li>
+                <li><a href="#0">News</a></li>
+                <li><a href="#0">Advisors</a></li>
+                <li><a href="#0">Careers</a></li>
+                <li><a href="#0">Dentist</a></li>
+                <li><a href="#0">Services</a></li>
+                <li><a href="#0">Legals</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Newsletter</h5>
+
+            <p>We will send out weekly newest article and some great offers</p>
+            <!-- Newsletter Form -->
+           <div class="mb-3 pb-3">
+              <a href="{% url 'Newsletter:subscribe' %}" class="btn- btn-success btn-lg">Subscribe</a>
+            </div>
+
+            <!-- Social Info -->
+            <div class="footer-social-info">
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copywrite Area -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copywrite-content">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Desgin By <strong>Mamun</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ***** Footer Area End ***** -->
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <!-- All js -->
+  <script src="{% static 'website/js/dento.bundle.js' %}"></script>
+  <!-- Active js -->
+  <script src="{% static 'website/js/default-assets/active.js' %}"></script>
+
+</body>
+
+</html>
